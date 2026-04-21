@@ -53,7 +53,7 @@ Returns JSON response:
   "track": "DevOps",
   "username": "pamelaunik"
 }
-
+```
 SSL Configuration
 
 - SSL certificate issued using Let's Encrypt (Certbot)
