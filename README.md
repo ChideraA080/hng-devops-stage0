@@ -54,7 +54,10 @@ Returns JSON response:
   "username": "pamelaunik"
 }
 ```
-### SSL Configuration
+Content-Type: application/json
+Status: 200 OK
+
+## SSL Configuration
 
 - SSL certificate issued using Let's Encrypt (Certbot)
 
@@ -62,11 +65,11 @@ Returns JSON response:
 
 - HTTP automatically redirects to HTTPS using 301 redirect
 
-### Domain:
+## Domain:
 
 https://chidera-devops.duckdns.org
 
-### Technical Requirements Met
+## Technical Requirements Met
 
  - Linux server provisioned
 
@@ -90,7 +93,23 @@ https://chidera-devops.duckdns.org
 
  - HTTP → HTTPS redirect (301)
 
-### Testing
+## Tools & Technologies
+
+Linux (Ubuntu)
+
+Nginx
+
+UFW Firewall
+
+OpenSSH
+
+Certbot (Let's Encrypt)
+
+AWS EC2
+
+DuckDNS
+
+### Testing & Validation
 
 Tested using:
 
@@ -98,7 +117,100 @@ curl https://chidera-devops.duckdns.org/
 
 curl https://chidera-devops.duckdns.org/api
 
-### Screenshots:
+## Challenges Faced & Solutions
+ 1. SSH Access Failure (Permission Denied)
+
+Issue:
+Grader could not connect via SSH.
+
+Cause:
+Incorrect or missing public key in authorized_keys.
+
+Solution:
+
+- I properly added HNG public key
+- I fixed permissions:
+```
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+- Verified ownership:
+```
+chown -R hngdevops:hngdevops ~/.ssh
+```
+2. API Response Failing Validation
+
+Issue:
+JSON response did not match expected format.
+
+Cause:
+Extra spaces and formatting issues.
+
+Solution:
+- I ensured strict JSON format in Nginx:
+```
+return 200 '{"message":"HNGI14 Stage 0","track":"DevOps","username":"pamelaunik"}';
+```
+3. UFW Check Failed
+
+Issue:
+Grader couldn’t run ufw status.
+
+Cause:
+Sudo required password.
+
+Solution:
+Configured passwordless sudo:
+```
+hngdevops ALL=(root) NOPASSWD:/usr/sbin/sshd,/usr/sbin/ufw
+```
+## Key Learnings
+
+- I learned how critical **SSH key authentication and proper file permissions** are. A small mistake in the `authorized_keys` setup or permissions can completely block server access and cause automation checks to fail.
+
+- I gained hands-on experience in **securing a Linux server**, including disabling root login, turning off password authentication, and restricting access using UFW.
+
+- I understood how to use **Nginx not just for static websites but also for routing API endpoints**, especially configuring `/api` to return the correct JSON response.
+
+- I realized how important **strict formatting is in automation systems** — even minor differences in JSON structure, spacing, or username casing can lead to failed validations.
+
+- I improved my ability to **troubleshoot and debug under pressure**, especially after failed attempts, by carefully identifying issues and fixing them step-by-step.
+
+- Overall, this project helped me move from just learning concepts to actually **applying DevOps practices in a real-world scenario**.
+
+##  Outcome
+
+- I successfully set up a **secure Linux-based web server** from scratch, handling both configuration and security manually.
+
+- I implemented proper **access control** by creating a non-root user and securing SSH with key-based authentication.
+
+- I configured **UFW firewall rules** to expose only the required ports (22, 80, 443), improving the server’s security.
+
+- I built a working **API endpoint (`/api`) using Nginx**, returning the exact JSON format required for validation.
+
+- I secured the application with **HTTPS using Let's Encrypt (Certbot)** and ensured HTTP traffic redirects properly to HTTPS.
+
+- I gained real experience in **debugging and fixing issues in a production-like environment**, especially around SSH access, DNS, and strict validation requirements.
+
+- Overall, I was able to move from just following instructions to actually **understanding and implementing core DevOps practices end-to-end**.
+
+##  Cost Management & Resource Cleanup
+
+To avoid unnecessary cloud charges, the EC2 instance used for this project was **terminated after successful implementation and validation of all requirements**.
+
+This was done after confirming that:
+
+- Nginx was correctly configured and working
+- The API endpoint (`/api`) returned the expected JSON response
+- HTTPS was properly set up with a valid Let's Encrypt certificate
+- SSH access and server configuration were successfully tested
+
+The instance was intentionally shut down to prevent ongoing billing, as this project does not require continuous uptime.
+
+ Note:
+The live environment is no longer active. If the domain is accessed, it may not resolve because the EC2 instance has been terminated after successful testing and submission readiness.
+
+## Screenshots:
 
 
 Launched Instance
