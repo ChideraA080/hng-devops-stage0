@@ -5,6 +5,8 @@
 This project is part of the HNG DevOps Stage 0 task. 
 It involves provisioning a Linux server, securing it, configuring Nginx to serve a static webpage and API endpoint, and securing the server using SSL (Let's Encrypt).
 
+This project focuses on **core DevOps fundamentals** including server hardening, web server configuration, and secure remote access.
+
 ## Server Setup
 
 A Linux Ubuntu server was provisioned on a cloud provider.
