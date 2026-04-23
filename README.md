@@ -43,7 +43,7 @@ Returns a static HTML page containing:
 my-hng-username:pamelaunik
 
 
-### 📍 Route: `/api`
+###  Route: `/api`
 
 Returns JSON response:
 
@@ -54,7 +54,7 @@ Returns JSON response:
   "username": "pamelaunik"
 }
 ```
-SSL Configuration
+### SSL Configuration
 
 - SSL certificate issued using Let's Encrypt (Certbot)
 
@@ -62,11 +62,11 @@ SSL Configuration
 
 - HTTP automatically redirects to HTTPS using 301 redirect
 
-Domain:
+### Domain:
 
 https://chidera-devops.duckdns.org
 
-Technical Requirements Met
+### Technical Requirements Met
 
  - Linux server provisioned
 
@@ -90,13 +90,46 @@ Technical Requirements Met
 
  - HTTP → HTTPS redirect (301)
 
-Testing
+### Testing
 
 Tested using:
 
 curl https://chidera-devops.duckdns.org/
 
 curl https://chidera-devops.duckdns.org/api
+
+### Screenshots:
+
+
+Launched Instance
+![Instance Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754636.jpg)
+
+HngDevops Group Added
+![Hnggroup Added](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_100624.jpg)
+
+Default Nginx Running On Browser
+![Default Nginx Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_115749.jpg)
+
+Nginx Successfully Configured
+![Nginx Success Config](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754172.jpg)
+
+UFW Status
+![Ufw Status](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_120227.jpg)
+
+Domain Live Displaying username
+![Domain Displaying Username](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754634.jpg)
+
+Certificate Encrypt
+![Cert Encrypt Success](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754194.jpg)
+
+Domain Testing
+![Domain Testing](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754251.jpg)
+
+Live Domain Dispalying Track and Username 
+![Live Domain](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754193.jpg)
+
+
+
 
 Author
 
