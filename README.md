@@ -7,6 +7,12 @@ It involves provisioning a Linux server, securing it, configuring Nginx to serve
 
 This project focuses on **core DevOps fundamentals** including server hardening, web server configuration, and secure remote access.
 
+## Architecture Diagram
+
+This diagram shows the flow of traffic from the user to the server, including DNS resolution, Nginx routing, and HTTPS handling.
+
+![Architecture Diagram](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/HngStage0%20Architectural%20Diagram.png)
+
 ## Server Setup
 
 A Linux Ubuntu server was provisioned on a cloud provider.
@@ -65,7 +71,7 @@ Returns JSON response:
 }
 ```
 Evidence of Successfull Configuration
-![Live Domain](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754193.jpg)
+![Live Domain](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/HNG%20API.png)
 
 Content-Type: application/json
 Status: 200 OK
@@ -225,9 +231,8 @@ The live environment is no longer active. If the domain is accessed, it may not 
 
 ## Screenshots:
 
-
 Launched Instance
-![Instance Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754636.jpg)
+![Instance Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/HNG%20Nginx.png)
 
 Default Nginx Running On Browser
 ![Default Nginx Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_115749.jpg)
