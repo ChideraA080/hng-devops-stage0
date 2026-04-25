@@ -128,7 +128,7 @@ AWS EC2
 
 DuckDNS
 
-### Testing & Validation
+## Testing & Validation
 
 Tested using:
 
