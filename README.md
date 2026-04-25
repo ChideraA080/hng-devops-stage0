@@ -22,6 +22,9 @@ A Linux Ubuntu server was provisioned on a cloud provider.
   - Port 80 (HTTP)
   - Port 443 (HTTPS)
 
+  Evidence of Successful UFW Configuration:
+  ![Ufw Status](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_120227.jpg)
+
 
 ##  SSH Configuration
 
@@ -33,6 +36,9 @@ A Linux Ubuntu server was provisioned on a cloud provider.
 - Set correct permissions:
   - `.ssh` → 700
   - `authorized_keys` → 600
+  
+Evidence of Successful SSH Verification
+  ![Hnggroup Added](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_100624.jpg)
 
 ##  Nginx Configuration
 
@@ -44,6 +50,8 @@ Returns a static HTML page containing:
 
 my-hng-username:pamelaunik
 
+Verification Output
+![Domain Displaying Username](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754634.jpg)
 
 ###  Route: `/api`
 
@@ -56,6 +64,9 @@ Returns JSON response:
   "username": "pamelaunik"
 }
 ```
+Evidence of Successfull Configuration
+![Live Domain](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754193.jpg)
+
 Content-Type: application/json
 Status: 200 OK
 
@@ -174,7 +185,7 @@ hngdevops ALL=(root) NOPASSWD:/usr/sbin/sshd,/usr/sbin/ufw
 
 - I understood how to use **Nginx not just for static websites but also for routing API endpoints**, especially configuring `/api` to return the correct JSON response.
 
-- I realized how important **strict formatting is in automation systems** — even minor differences in JSON structure, spacing, or username casing can lead to failed validations.
+- I realized how important **strict formatting is in automation systems** - even minor differences in JSON structure, spacing, or username casing can lead to failed validations.
 
 - I improved my ability to **troubleshoot and debug under pressure**, especially after failed attempts, by carefully identifying issues and fixing them step-by-step.
 
@@ -218,32 +229,17 @@ The live environment is no longer active. If the domain is accessed, it may not 
 Launched Instance
 ![Instance Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754636.jpg)
 
-HngDevops Group Added
-![Hnggroup Added](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_100624.jpg)
-
 Default Nginx Running On Browser
 ![Default Nginx Running](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_115749.jpg)
 
 Nginx Successfully Configured
 ![Nginx Success Config](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754172.jpg)
 
-UFW Status
-![Ufw Status](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/IMG_20260415_120227.jpg)
-
-Domain Live Displaying username
-![Domain Displaying Username](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754634.jpg)
-
 Certificate Encrypt
 ![Cert Encrypt Success](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754194.jpg)
 
 Domain Testing
 ![Domain Testing](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754251.jpg)
-
-Live Domain Dispalying Track and Username 
-![Live Domain](https://github.com/ChideraA080/hng-devops-stage0/blob/main/Hng_Stage0%20Screenshots/1000754193.jpg)
-
-
-
 
 Author
 
